@@ -1,0 +1,33 @@
+package week_2;
+class Dog {
+    String name;
+    String breed;
+    int age;
+    public Dog(String name, String breed, int age) {
+        this.name = name;
+        this.breed = breed;
+        this.age = age;
+    }
+    public void bark() {
+        System.out.println("Woof woof!");
+    }
+}
+
+ class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog("Buddy", "Labrador Retriever", 3);
+        System.out.println("Before modification:");
+        System.out.println("Name: " + myDog.name);
+        System.out.println("Breed: " + myDog.breed);
+        System.out.println("Age: " + myDog.age);
+        myDog.name = "Max";
+        myDog.breed = "Golden Retriever";
+        myDog.age = 4;
+        System.out.println("\nAfter modification:");
+        System.out.println("Name: " + myDog.name);
+        System.out.println("Breed: " + myDog.breed);
+        System.out.println("Age: " + myDog.age);
+        System.out.println("\nMaking the dog bark:");
+        myDog.bark();
+    }
+}
